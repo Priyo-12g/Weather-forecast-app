@@ -35,9 +35,9 @@ def getWeather():
     current_time = local_time.strftime("%I:%M:%p")
     clock.config(text=current_time)
 
-    # Weather API
+    # Weather api
     
-    data = requests.get("https://api.openweathermap.org/data/2.5/onecall?lat="+str(location.latitude)+"&lon="+str(location.longitude)+"&units=metric&exclude=hourly&appid=5ca7b9dc335126854aea82b7257a977f").json()
+    data = requests.get("https://api.openweathermap.org/data/2.5/onecall?lat="+str(location.latitude)+"&lon="+str(location.longitude)+"&units=metric&exclude=hourly&appid=api key").json()
 
     if 'current' in data:
         # Current weather
